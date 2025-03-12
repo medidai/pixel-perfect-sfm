@@ -6,7 +6,6 @@ from collections import defaultdict
 from omegaconf import OmegaConf, DictConfig
 from pathlib import Path
 from typing import List, Dict
-import pycolmap
 
 from ... import logger, set_debug
 from ...refine_hloc import PixSfM
@@ -14,7 +13,7 @@ from ...configs import parse_config_path, default_configs
 from .utils import Paths, extract_and_match, create_list_files
 from .config import SCENES, FEATURES, DEFAULT_FEATURES, OUTDOOR, INDOOR
 from .config import DATASET_PATH, OUTPUTS_PATH
-
+import pycolmap
 
 def eval_multiview(tool_path: Path, ply_path: Path, scan_path: Path,
                    tolerances: List[float]) -> Dict:

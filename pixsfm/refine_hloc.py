@@ -3,7 +3,6 @@ from typing import Optional
 from pathlib import Path
 from omegaconf import OmegaConf
 
-import pycolmap
 
 from . import logger
 from .refine_colmap import PixSfM as PixSfM_colmap, add_common_args
@@ -20,6 +19,7 @@ try:
 except ImportError:
     logger.warning("Could not import hloc.")
     hloc = None
+import pycolmap
 
 
 class PixSfM(PixSfM_colmap):

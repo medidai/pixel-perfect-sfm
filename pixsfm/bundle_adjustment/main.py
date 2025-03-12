@@ -1,12 +1,12 @@
 from copy import deepcopy
 from omegaconf import OmegaConf
-import pycolmap
 from typing import Optional
 
 from .. import features
 from .._pixsfm import _bundle_adjustment as ba
 from ..util.misc import to_ctr, to_optim_ctr
 from ..base import interpolation_default_conf, solver_default_conf
+import pycolmap
 
 
 def default_problem_setup(reconstruction):

@@ -9,7 +9,6 @@ from pathlib import Path
 from typing import List, Set, Dict, Any, Optional
 import h5py
 
-import pycolmap
 from hloc.utils.parsers import parse_retrieval, names_to_pair
 from hloc.match_dense import assign_keypoints, match_dense
 
@@ -26,6 +25,7 @@ from .utils import (
 from .config import SCENES, FEATURES, DEFAULT_FEATURES, LOCALIZATION_IMAGES
 from .config import DATASET_PATH, OUTPUTS_PATH, match_configs, feature_configs
 
+import pycolmap
 
 def copy_reconstruction_empty(rec: pycolmap.Reconstruction, target_path: Path,
                               exclude_images: Set[str] = set()):

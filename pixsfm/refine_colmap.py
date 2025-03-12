@@ -6,8 +6,6 @@ from typing import Optional, Union, Tuple, List, Dict
 from pathlib import Path
 from omegaconf import OmegaConf, DictConfig
 
-import pycolmap
-
 from . import logger, extract
 from .base import interpolation_default_conf
 from .configs import parse_config_path, default_configs
@@ -18,6 +16,7 @@ from .keypoint_adjustment import KeypointAdjuster, build_matching_graph
 from .util.colmap import (
     read_keypoints_from_db, read_matches_from_db, write_keypoints_to_db
 )
+import pycolmap
 
 
 class PixSfM:

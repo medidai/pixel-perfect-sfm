@@ -2,13 +2,13 @@ import h5py
 import numpy as np
 from pathlib import Path
 from tqdm import tqdm
-import pycolmap
 
 from . import keypoint_adjustment as ka, features, base
 from .features.store_features import write_featuremap_cache
 from .features.extractor import FeatureExtractor
 from .util.misc import check_memory
 from . import logger
+import pycolmap
 
 type_to_np = {"double": np.float64,
               "float": np.float32,

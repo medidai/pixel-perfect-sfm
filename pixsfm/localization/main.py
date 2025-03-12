@@ -4,7 +4,6 @@ from typing import Union, Optional, Dict, List
 from omegaconf.omegaconf import OmegaConf, DictConfig
 import numpy as np
 from collections import defaultdict
-import pycolmap
 import pyceres
 
 from .. import features, bundle_adjustment as ba, logger
@@ -15,7 +14,7 @@ from ..features import FeatureManager, Map_IdReference
 from ..extract import features_from_reconstruction, load_features_from_cache
 from ..configs import parse_config_path
 from ..util.misc import resolve_level_indices, to_ctr, to_optim_ctr
-
+import pycolmap
 
 def find_feature_inliers(p2Ds, fmap, references, interpolation_config,
                          thresh=-1):
