@@ -62,21 +62,25 @@ class KeypointAdjuster:
         'strategy': 'featuremetric',
         'apply': True,
         'interpolation': base.interpolation_default_conf,
-        'level_indices': None,
-        'max_kps_per_problem': 50,
+        'level_indices': 'all',
+        'max_kps_per_problem': 100,
         'optimizer': {
             'loss': {
                 'name': 'cauchy',
-                'params': [0.25]
+                'params': [0.5]
             },
             'solver': {
                 **base.solver_default_conf,
-                'parameter_tolerance': 1.0e-5,
-                'num_threads': 1
+                'parameter_tolerance': 1.0e-6,
+                'function_tolerance': 1.0e-6,
+                'max_num_iterations': 100,
+                'num_threads': -1
             },
-            'print_summary': False,
-            'bound': 4.0,
-            'num_threads': -1
+            'print_summary': True,
+            'bound': 6.0,
+            'num_threads': -1,
+            'root_regularize_weight': 0.1,
+            'weight_by_sim': True
         },
         'split_in_subproblems': True
     }

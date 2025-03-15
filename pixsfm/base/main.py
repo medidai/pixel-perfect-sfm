@@ -1,9 +1,9 @@
 interpolation_default_conf = {
-    'nodes': [[0.0, 0.0]],
+    'nodes': [[0.0, 0.0], [-0.5, -0.5], [0.5, -0.5], [-0.5, 0.5], [0.5, 0.5]],
     'mode': 'BICUBIC',
     'l2_normalize': True,
-    'ncc_normalize': False,
-    "use_float_simd": False
+    'ncc_normalize': True,
+    "use_float_simd": True
 }
 
 solver_default_conf = {
