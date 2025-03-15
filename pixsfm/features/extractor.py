@@ -40,7 +40,7 @@ class FeatureExtractor:
             "name": "s2dnet",
             # model params
         },
-        'patch_size': 16,
+        'patch_size': 32,
         'pyr_scales': [1.0],
         'resize': 'LANCZOS',
         'sparse': True,
