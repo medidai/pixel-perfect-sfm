@@ -63,7 +63,7 @@ class KeypointAdjuster:
         'apply': True,
         'interpolation': base.interpolation_default_conf,
         'level_indices': None,
-        'max_kps_per_problem': 50,
+        'max_kps_per_problem': 100,
         'optimizer': {
             'loss': {
                 'name': 'cauchy',
