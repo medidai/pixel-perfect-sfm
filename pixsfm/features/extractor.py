@@ -84,7 +84,7 @@ class FeatureExtractor:
         for _ in self.conf.pyr_scales:
             self.channels_per_level += self.model.output_dims
 
-        logger.info('Loaded dense extractor with configuration:\n'
+        logger.info('UPDATEDDDDD Loaded dense extractor with configuration:\n'
                     f'{pprint.pformat(dict(self.conf))}')
 
     @torch.no_grad()
