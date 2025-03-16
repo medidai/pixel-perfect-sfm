@@ -62,7 +62,7 @@ class KeypointAdjuster:
         'strategy': 'featuremetric',
         'apply': True,
         'interpolation': base.interpolation_default_conf,
-        'level_indices': 'all',
+        'level_indices': None,
         'max_kps_per_problem': 100,
         'optimizer': {
             'loss': {
