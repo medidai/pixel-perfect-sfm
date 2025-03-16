@@ -62,8 +62,8 @@ class KeypointAdjuster:
         'strategy': 'featuremetric',
         'apply': True,
         'interpolation': base.interpolation_default_conf,
-        'level_indices': None,
-        'max_kps_per_problem': 50,
+        'level_indices': 'all',
+        'max_kps_per_problem': 100,
         'optimizer': {
             'loss': {
                 'name': 'cauchy',
