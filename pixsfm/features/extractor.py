@@ -32,7 +32,7 @@ def dynamic_load(root, model):
 class FeatureExtractor:
     default_conf = {
         'device': 'auto',
-        'dtype': 'half',
+        'dtype': 'float',
         'fast_image_load': False,
         'l2_normalize': True,
         'max_edge': 1600,
@@ -42,7 +42,7 @@ class FeatureExtractor:
         },
         'patch_size': 16,
         'pyr_scales': [1.0],
-        'resize': 'LANCZOS',
+        'resize': 'BICUBIC',
         'sparse': True,
         'use_cache': False,
         'overwrite_cache': False,
@@ -84,7 +84,7 @@ class FeatureExtractor:
         for _ in self.conf.pyr_scales:
             self.channels_per_level += self.model.output_dims
 
-        logger.info('Loaded dense extractor with configuration:\n'
+        logger.info('HELOLoaded dense extractor with configuration:\n'
                     f'{pprint.pformat(dict(self.conf))}')
 
     @torch.no_grad()
