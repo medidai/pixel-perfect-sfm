@@ -71,7 +71,7 @@ class KeypointAdjuster:
             },
             'solver': {
                 **base.solver_default_conf,
-                'parameter_tolerance': 1.0e-5,
+                'parameter_tolerance': 1.0e-6,
                 'num_threads': 1
             },
             'print_summary': False,
