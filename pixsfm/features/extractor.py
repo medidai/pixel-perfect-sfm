@@ -32,7 +32,7 @@ def dynamic_load(root, model):
 class FeatureExtractor:
     default_conf = {
         'device': 'auto',
-        'dtype': 'half',
+        'dtype': 'float',
         'fast_image_load': False,
         'l2_normalize': True,
         'max_edge': 1600,
@@ -42,7 +42,7 @@ class FeatureExtractor:
         },
         'patch_size': 16,
         'pyr_scales': [1.0],
-        'resize': 'LANCZOS',
+        'resize': 'BILINEAR',
         'sparse': True,
         'use_cache': False,
         'overwrite_cache': False,

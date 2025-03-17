@@ -63,7 +63,7 @@ class KeypointAdjuster:
         'apply': True,
         'interpolation': base.interpolation_default_conf,
         'level_indices': None,
-        'max_kps_per_problem': 50,
+        'max_kps_per_problem': 100,
         'optimizer': {
             'loss': {
                 'name': 'cauchy',
@@ -71,11 +71,11 @@ class KeypointAdjuster:
             },
             'solver': {
                 **base.solver_default_conf,
-                'parameter_tolerance': 1.0e-5,
-                'num_threads': 1
+                'parameter_tolerance': 1.0e-6,
+                'num_threads': -1
             },
             'print_summary': False,
-            'bound': 4.0,
+            'bound': 5.0,
             'num_threads': -1
         },
         'split_in_subproblems': True

@@ -118,7 +118,7 @@ class PixSfM:
             image_dir: Path,
             cache_path: Optional[Path] = None,
             feature_manager: Optional[FeatureManager] = None):
-        reconstruction = pycolmap.Reconstruction(str(input_path))
+        reconstruction = pycolmap.Reconstruction(str(input_path)) # this fails
         cache_path = self.resolve_cache_path(cache_path, output_path)
         reconstruction, ba_data, feature_manager = self.run_ba(
                 reconstruction, image_dir, cache_path=cache_path,
