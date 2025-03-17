@@ -42,7 +42,7 @@ class FeatureExtractor:
         },
         'patch_size': 16,
         'pyr_scales': [1.0],
-        'resize': 'BILINEAR',
+        'resize': 'LANCZOS',
         'sparse': True,
         'use_cache': False,
         'overwrite_cache': False,
